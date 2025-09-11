@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Lampu Lalu Lintas</title>
+    </head>
+<body>
+    <script>
+    /*
+    1. Buatlah file untuk membuat aplikasi kecil mengenai I/O BOM (Browser Object Model) dan outputnya 
+    menggunakan DOM (Document Object Model) untuk membuat lampu lalu lintas.
+
+    2. Bila input data adalah "merah", maka outputnya adalah "kendaraan harus berhenti", jika input data
+    adalah "kuning", maka outputnya adalah "kendaraan berhati-hati", selain itu input "hijau" maka 
+    kendaraan berjalan.
+    */
+
+    const lampu = prompt("Masukkan warna lampu lalu lintas (merah, kuning, hijau):")
+
+    if (lampu === "merah") {
+        document.write("<h1>anda sedang melihat lampu merah, sebaiknya kendaraan anda harus berhenti</h1>")
+    } else if (lampu === "kuning") {
+        document.write("<h1>Anda sedang melihat lampu kuning, sebaiknya kendaraan anda berhati-hati</h1>")
+    } else if (lampu === "hijau") {
+        document.write("<h1>Anda sedang melihat lampu hijau, sebaiknya kendaraan anda berjalan</h1>")
+    } else {
+        document.write("<h1>Warna lampu salah. silahkan masukkan warna merah, kuning, atau hijau.</h1>")
+    }
+    </script>
+</body>
+</html>
