@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+</head>
+<body>
+    <script>
+        let tx
+        tx = "This"
+        document.write('<p>' + tx + '<br')
+        tx = tx + 'is a'
+        document.write(tx + '<br>')
+        tx += 'sentence.'
+        document.write(tx + '</p>')
+
+        let z
+        z = 6
+        document.write('<>' + z + '')
+        z++                             // ++z Dihitung dan tampilkan
+        document.write(z + '')          // z++ Ditampilkan dulu baru dihitung
+        z--
+        document.write(z + '')
+
+        z += 13
+        document.write(z + '')
+        z -= 5
+        document.write(z + '')
+        z *= 3
+        document.write(z + '')
+        z /= 6
+        document.write(z + '')
+        z %= 3
+        document.write(z + '</p>')
+
+        let a = 5, b = 5, c = 5, d
+        d = a++
+        document.write('<p>' + d + '')
+        d = ++b
+        document.write(d + '')
+        d = c++ + ++c + c++
+        document.write(d + '</p>')
+    </script>
+</body>
+</html>
