@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>If Else IO</title>
+</head>
+<body>
+    <script>
+        const numberRandom = Math.random()
+        const input = prompt('Please enter a number from 0 to 1, without 1')
+        const numberInput = parseFloat(input)
+        const distance = Math.abs(numberRandom - numberInput)
+
+        if (input == null)
+            document.write('Cancel')
+        else if (input === '')
+        document.write('no input')
+        else if (isNaN(input))
+            document.write('No valid number')
+        else if (numberInput < 0 || numberInput >= 1)
+            document.write('No number in the valid range')
+        else if (distance < 0.1)
+            document.write('You are close')
+        else
+            document.write('You are off')
+
+        document.write('You are far off')
+        document.write('input: ' + input + '<br>')
+        document.write('isNan(): ' + isNaN(input) + '<br>')
+        document.write('Number: ' + numberInput + '<br>')
+        
+        const numberDiff = numberRandom - numberInput
+        document.write('Difference: ' + numberDiff + '<br>')
+        document.write('Distance: ' + distance)
+    </script>
+</body>
+</html>

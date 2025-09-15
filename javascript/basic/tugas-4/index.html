@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Input user
+        const username = prompt('Silahkan masukkan nama anda: ')
+        const nip = prompt('Silahkan masukkan NIP anda: ')
+
+        // Pecah NIP
+        const birthOfDate = nip.substring(0, 8)
+        const asnDate = nip.substring(8, 14)
+        const genderCode = nip.substring(14, 15)
+        const serialNumber = nip.slice(-3)
+
+        // Format tanggal lahir
+        const birthYear = birthOfDate.substring(0, 4)
+        const birthMonth = birthOfDate.substring(4, 6)
+        const birthDate = birthOfDate.substring(6, 8)
+
+        const dateObj = new Date(`${birthYear}-${birthMonth}-${birthDate}`)
+        const formattedBirthDate = dateObj.toLocaleDateString('id-ID', {
+            weekday: 'long',
+            day: 'numeric',
+            month: 'long',
+            year: 'numeric'
+        })
+
+        // Format tanggal ASN
+        const asnYear = asnDate.substring(0, 4)
+        const asnMonth = asnDate.substring(4, 6)
+        
+        const asnDateObj = new Date(`${asnYear}-${asnMonth}-01`)
+        const formattedAsnDate = asnDateObj.toLocaleDateString('id-ID', {
+            month: 'long',
+            year: 'numeric'
+        })
+
+        // Jenis kelamin
+        let gender = '' 
+        if (genderCode === '1') { 
+            gender = 'Pria' 
+        } else if (genderCode === '2') { 
+            gender = 'Wanita' 
+        } else { 
+            gender = 'Tidak diketahui' 
+        }
+
+        // Output
+        document.write('Nama: ' + username + '<br>')
+        document.write('NIP: ' + nip + '<br>')
+        document.write('Tanggal Lahir: ' + formattedBirthDate + '<br>')
+        document.write('Tanggal ASN: ' + formattedAsnDate + '<br>')
+        document.write('Jenis Kelamin: ' + gender + '<br>')
+        document.write('No. Urut: ' + serialNumber + '<br>')
+    </script>
+</body>
+</html>

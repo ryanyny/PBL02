@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biodata</title>
+</head>
+<body>
+    <script>
+        const username = prompt("Masukkan nama anda: ").toLowerCase()
+        const gender = prompt("Masukkan jenis kelamin anda (pria / wanita): ").toLowerCase()
+        const status = prompt("Masukkan status anda (sendiri, kawin, cerai): ").toLowerCase()
+        let result = ''
+
+        if (gender === 'pria') {
+            if (status === 'sendiri') result = 'perjaka'
+            else if (status === 'kawin') result = 'menikah'
+            else if (status === 'cerai') result = 'duda'
+        } else if (gender === 'wanita') {
+            if (status === 'sendiri') result = 'perawan'
+            else if (status === 'kawin') result = 'menikah'
+            else if (status === 'cerai') result = 'janda'
+        }
+
+        if (!result) {
+            result = 'Anda salah memasukkan data jenis kelamin dan status!'
+        }
+
+        document.write('Nama: ' + username + '<br>')
+        document.write('Jenis Kelamin: ' + gender + '<br>')
+        document.write('Status: ' + status + '<br>')
+        document.write('Keterangan: ' + result + '<br>')
+    </script>
+</body>
+</html>
